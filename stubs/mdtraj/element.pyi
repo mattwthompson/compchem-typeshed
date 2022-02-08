@@ -1,0 +1,3 @@
+class Element:
+    @classmethod
+    def getByMass(mass: float) -> Element: ...
