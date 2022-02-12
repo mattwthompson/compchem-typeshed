@@ -1,5 +1,4 @@
 from collections.abc import Generator
-from openmm.unit import is_quantity as is_quantity, nanometers as nanometers, sqrt as sqrt
 from openmm.vec3 import Vec3 as Vec3
 from typing import Any
 
