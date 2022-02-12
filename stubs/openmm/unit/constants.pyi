@@ -1,0 +1,8 @@
+from .unit_definitions import *
+from typing import Any
+
+AVOGADRO_CONSTANT_NA: Any
+BOLTZMANN_CONSTANT_kB: Any
+MOLAR_GAS_CONSTANT_R: Any
+SPEED_OF_LIGHT_C: Any
+GRAVITATIONAL_CONSTANT_G: Any
