@@ -1,0 +1,3 @@
+from typing import Any
+
+def PackageToXml(pkg, summary: str = ..., trainingDataId: str = ..., dataPerformance=..., recommendedThreshold: Any | None = ..., classDescriptions: Any | None = ..., modelType: Any | None = ..., modelOrganism: Any | None = ...): ...

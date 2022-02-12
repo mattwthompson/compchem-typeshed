@@ -1,0 +1,43 @@
+from collections.abc import Generator
+from rdkit import Chem as Chem
+from rdkit.Chem.rdDistGeom import EmbedMolecule as EmbedMolecule
+from typing import Any
+
+class StereoEnumerationOptions:
+    tryEmbedding: Any
+    onlyUnassigned: Any
+    onlyStereoGroups: Any
+    maxIsomers: Any
+    rand: Any
+    unique: Any
+    def __init__(self, tryEmbedding: bool = ..., onlyUnassigned: bool = ..., maxIsomers: int = ..., rand: Any | None = ..., unique: bool = ..., onlyStereoGroups: bool = ...) -> None: ...
+
+class _BondFlipper:
+    bond: Any
+    def __init__(self, bond) -> None: ...
+    def flip(self, flag) -> None: ...
+
+class _AtomFlipper:
+    atom: Any
+    def __init__(self, atom) -> None: ...
+    def flip(self, flag) -> None: ...
+
+class _StereoGroupFlipper:
+    def __init__(self, group) -> None: ...
+    def flip(self, flag) -> None: ...
+
+class _RangeBitsGenerator:
+    nCenters: Any
+    def __init__(self, nCenters) -> None: ...
+    def __iter__(self): ...
+
+class _UniqueRandomBitsGenerator:
+    nCenters: Any
+    maxIsomers: Any
+    rand: Any
+    already_seen: Any
+    def __init__(self, nCenters, maxIsomers, rand) -> None: ...
+    def __iter__(self): ...
+
+def GetStereoisomerCount(m, options=...): ...
+def EnumerateStereoisomers(m, options=..., verbose: bool = ...) -> Generator[Any, None, None]: ...

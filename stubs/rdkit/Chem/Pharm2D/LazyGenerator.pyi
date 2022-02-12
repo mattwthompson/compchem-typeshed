@@ -1,0 +1,13 @@
+from rdkit.Chem.Pharm2D import Matcher as Matcher, SigFactory as SigFactory
+from typing import Any
+
+class Generator:
+    sigFactory: Any
+    mol: Any
+    dMat: Any
+    bits: Any
+    pattMatches: Any
+    def __init__(self, sigFactory, mol, dMat: Any | None = ..., bitCache: bool = ...) -> None: ...
+    def GetBit(self, idx): ...
+    def __len__(self): ...
+    def __getitem__(self, itm): ...
